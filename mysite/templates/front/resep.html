@@ -1,0 +1,65 @@
+{% extends 'front/base.html' %}
+{% load static %}
+{% block content %}
+      <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main mt-5" id="top">
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section>
+        <div class="container">
+          <div class="py-0">
+            <p class="text-dark text-center fs-1"><b>Masak Apa Hari Ini</b></p>            
+          </div>
+        </div>
+        <!-- end of .container-->
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-0">
+            <div class="container">
+                {% for d in resep %}
+                <div class="card">
+                  {% if d.thumb %}
+                  <img src="{{ d.thumb }}" class="card-img-top" alt="rover">
+                  {% else %}
+                  <img src="https://www.astronauts.id/blog/wp-content/uploads/2022/08/Makanan-Khas-Daerah-tiap-Provinsi-di-Indonesia-Serta-Daerah-Asalnya.jpg" class="card-img-top" alt="rover">
+
+                  {% endif %}
+                    <div class="card-body">
+                      <p><b>{{ d.title }}</b></p>
+                      <p>Durasi : {{ d.times }}</p>
+                      <a href="{% url 'resep_detil' d.key %}" class="getstarted">Read More</a>
+                  </div>
+                </div>
+              {% endfor %}
+              </div>
+        
+      
+        <!-- end of .container-->
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section>
+
+      <div class="container bg-dark overflow-hidden rounded-1">
+        <div class="bg-holder" style="background-image:url(assets/img/promo/promo-bg.png);">
+        </div>
+        <!--/.bg-holder-->
+      </div>
+      <!-- end of .container-->
+
+    </section>
+
+{% endblock content %}

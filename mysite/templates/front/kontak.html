@@ -1,0 +1,30 @@
+{% extends 'front/base.html' %}
+{% load static %}
+
+{% block content %}
+<!--Start Main-->
+<main class="main mt-5" id="top">
+    <section> 
+        <div class="container bg-dark overflow-hidden rounded-1">
+            <div class="px-5 py-7 position-relative">
+              <h1 class="text-center w-lg-75 mt-5 mx-auto fs-lg-6 fs-md-4 fs-3 text-white">Hubungi Kami</h1>
+                <div class="row justify-content-center mt-2">
+                    <div class="col-auto w-50 w-lg-50 mt-2">
+                     <input class="form-control mb-2 border-light " type="text" placeholder="Nama Lengkap"/>
+                     <input class="form-control mb-2 border-light " type="email" placeholder="Email"/>
+                     <input class="form-control mb-2 border-light " type="text" placeholder="Subject"/>
+                     <input class="form-control mb-2 h-20 border-light " type="text" placeholder="Berita"/>
+                     <textarea name="alamat" class="form-control mb-2" placeholder="Alamat Restaurant" rows="4" cols="42"></textarea>
+                     <input class="form-control mb-2 border-light " type="number" placeholder="No Telepon"/>
+                    </div><br>
+                </div>
+                <div class="col-auto mt-2 justify-content-center mt-lg-0 ">
+                    <button class="btn btn-success text-dark justify-content-center">Start now</button>
+                </div>
+            </div>
+          </div>
+    </section>
+</main>
+<!-- End #main -->
+
+{% endblock content %}
