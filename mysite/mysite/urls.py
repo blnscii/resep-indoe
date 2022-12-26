@@ -12,9 +12,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', index, name='index'),
     path('resep', resep, name='resep'),
-    path('resep/detil/<str:key>', resep_detil, name='resep_detil'),
+    path('resep/detil/<str:key>', resep_detil2, name='resep_detil2'),
     path('tempatmakan', tempatmakan, name='tempatmakan'),
     path('kontak', kontak, name='kontak'),
+    path('tentang', tentang, name='tentang'),
         
     # apps 
     path('dashboard/', include('resep.urls')),

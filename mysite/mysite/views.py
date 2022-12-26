@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout
 from django.http import HttpResponse #format html langsung ditulis didalam httpresponse
-from resep.models import Resep
+from resep.models import Resep, Tempat
 import requests
 
 
@@ -17,34 +17,49 @@ def index(request):
 
 def resep(request):
     template_name = 'front/resep.html'
-    resep = Resep.objects.all()        
+    resep = Resep.objects.all()
     context = {
         'title' : 'Resep',
         'resep' : resep
     }
     return render(request, template_name, context)
 
-def resep_detil(request, key):
+def resep_detil2(request, key):
     template_name = 'front/resep_detil.html'
     resep = Resep.objects.get(key=key) 
+    dresep = Resep.objects.all()    
+    ingredient = resep.ingredient.replace("[", "").replace("]", "").replace("'","")
+    step = resep.step.replace("[", "").replace("]", "").replace("', '", "-").replace("'","").replace("-", "\n")
     context = {
         'title' : 'Resep',
-        'resep' : resep
+        'resep' : resep,
+        'dresep': dresep,
+        'step' : step,
+        'ingredient' : ingredient,
     }
     return render(request, template_name, context)
 
 
 def tempatmakan(request):
     template_name = 'front/tempatmakan.html'
+    tempat = Tempat.objects.all()
     context = {
         'title' : 'Rekomendasi Tempat Makan',
+        'tempat' : tempat
     }
     return render(request, template_name, context)
 
 def kontak(request):
     template_name = 'front/kontak.html'
     context = {
-        'title' : 'Kontak Kami',
+        'title' : 'kontak Kami',
+    }
+    return render(request, template_name, context)
+
+def tentang(request):
+    template_name = 'front/tentang.html'
+    context = {
+        'title' : 'Tentang Saya',
     }
     return render(request, template_name, context)
 
