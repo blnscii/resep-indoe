@@ -1,0 +1,10 @@
+/mysite/__pycache__/*
+
+/resep/__pycache__/*
+/resep/migrations/*
+
+/venv/
+.edia/
+.env
+db.sqlite3
+/media/

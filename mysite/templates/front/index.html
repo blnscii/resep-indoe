@@ -15,8 +15,8 @@
         <div class="carousel-item active" style="background-image: url({% static 'front/img/slide/slide-1.jpg' %})">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Selamat Datang di <span>Resep Indoe</span></h2>
-              <p class="animate__animated animate__fadeInUp">Temukan resep menu makanan .</p>
+              <h2 class="animate__animated animate__fadeInDown">"Resep Kari Ayam Berkuah Gurih Kental"</h2>
+              <p class="animate__animated animate__fadeInUp">Merupakan kuliner khas sumatra, kari ayam berkuah kental ini sangat cocok disantap untuk lauk nasi atau dengan roti jala atau pratha.  </p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
           </div>
@@ -57,220 +57,95 @@
     </div>
   </section><!-- End Hero -->
 
-    <!-- ======= Portfolio Section ======= -->
+<!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container">
+        <div class="row center">
+          <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-food-tab" data-bs-toggle="pill" data-bs-target="#pills-food" type="button" role="tab" aria-controls="pills-food" aria-selected="true">Makanan</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-drink-tab" data-bs-toggle="pill" data-bs-target="#pills-drink" type="button" role="tab" aria-controls="pills-drink" aria-selected="false">Minuman</button>
+            </li>
+          </ul>
 
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-card">Minuman</li>
-              <li data-filter=".filter-app">Pancake </li>
-              <li data-filter=".filter-web">Makanan</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/portfolio1.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Bingka</h4>
-                <p>Pancake</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/portfolio1.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/lontong-sayur.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Lontong Sayur</h4>
-                <p>Kuah</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/lontong-sayur.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/portfolio-3.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Terang Bulan</h4>
-                <p>Moon Light</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/portfolio-3.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/rawon.jpeg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Soto Banjar</h4>
-                <p>Soto</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/rawon.jpeg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-              <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                  <div class="card">
-                    <img src="{% static 'front/img/portfolio/portfolio1.jpg' %}" class="card-img-top" alt="...">
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-food" role="tabpanel" aria-labelledby="pills-food-tab">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/lontong-sayur.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/pecel.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/rawon.jpeg' %}" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/sate.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/pempek.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/gudeg.jpg' %}" class="card-img-top" alt="...">
+                    </div>
                   </div>
                 </div>
-            </div>
-          </div>
+              </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/pancake4.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Terang Bulan</h4>
-                <p>Moon Light</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/pancake4.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              <div class="tab-pane fade" id="pills-drink" role="tabpanel" aria-labelledby="pills-drink-tab">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/kunyit-asem.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/cendol-dawet.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/wedang-kacang-hijau-khas-indonesia.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/timun.jpg' %}"class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/lahang.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'front/img/portfolio/sereh.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/soto-banjar.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Soto Banjar</h4>
-                <p>Soto</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/soto-banjar.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/pancake3.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/pancake3.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/pancake1.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Terang Bulan</h4>
-                <p>Moon Light</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/pancake1.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/kunyit-asem.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/kunyit-asem.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/Pecel.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Makanan </h4>
-                <p>Makanan</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/Pecel.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/cendol-dawet.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>minuman 3</h4>
-                <p>minuman</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/cendol-dawet.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/pancake2.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Terang Bulan</h4>
-                <p>Moon Light</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/pancake2.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'front/img/portfolio/sate.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Makanan 3</h4>
-                <p>Makanan</p>
-                <div class="portfolio-links">
-                  <a href=" {% static 'front/img/portfolio/sate.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+        </div>          
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
+<!-- End Portfolio Section -->
 
-  </main><!-- End #main -->
+</main><!-- End #main -->
 
 {% endblock content %}

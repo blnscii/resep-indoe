@@ -33,13 +33,11 @@
                     <div class="card-body">
                       <p><b>{{ d.title }}</b></p>
                       <p>Durasi : {{ d.times }}</p>
-                      <a href="{% url 'resep_detil' d.key %}" class="getstarted">Read More</a>
+                      <a href="{% url 'resep_detil2' d.key %}" class="getstarted">Read More</a>
                   </div>
                 </div>
               {% endfor %}
               </div>
-        
-      
         <!-- end of .container-->
       </section>
       <!-- <section> close ============================-->

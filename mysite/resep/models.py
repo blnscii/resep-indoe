@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class Tempat(models.Model):
     nama = models.CharField(max_length=50)
+    thumb = models.URLField(blank=True, null=True)
     alamat = models.TextField()
     kontak = models.IntegerField()
     
@@ -15,7 +16,7 @@ class Resep(models.Model):
     thumb = models.URLField(blank=True, null=True)
     key   = models.CharField(max_length=100)
     times = models.CharField(max_length=50)
-    desc  = models.TextField()
+    step  = models.TextField()
     ingredient = models.TextField()
     
     def __str__(self):

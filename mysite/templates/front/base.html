@@ -1,4 +1,11 @@
 {% load static %}
+
+{% url 'index' as index_url %}
+{% url 'resep' as resep_url %}
+{% url 'tempatmakan' as tempatmakan_url %}
+{% url 'kontak' as kontak_url %}
+{% url 'tentang' as tentang_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,17 +17,25 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="{% static 'front/vendors/prism/prism.css' %}" rel="stylesheet">
+    <link href="{% static 'front/vendors/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/theme.css' %}" rel="stylesheet" />
+    <link href="{% static 'front/assets/css/user.css' %}" rel="stylesheet" />
+
   <!-- Favicons -->
   <link href="{% static 'front/img/favicon.png' %}" rel="icon">
   <link href="{% static 'front/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  {% block css %}
-  
-  {% endblock css %}
   <link href="{% static 'front/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
   <link href="{% static 'front/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'front/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
@@ -34,7 +49,6 @@
 </head>
 
 <body>
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
@@ -45,10 +59,11 @@
 
       <nav id="navbar" class="navbar m-auto">
         <ul>
-          <li><a href="{% url 'index' %}" class="active">Home</a></li>
-          <li><a href="{% url 'resep' %}">Resep</a></li>
-          <li><a href="{% url 'tempatmakan' %}">Rumah Makan</a></li>
-          <li><a href="{% url 'kontak' %}">Hubungi</a></li>
+          <li class=" {% if request.path == index_url %} active {% endif %} "><a href="{{index_url}}">Home</a></li>
+          <li class=" {% if request.path == resep_url %} active {% endif %} "><a href="{{resep_url}}">Resep</a></li>
+          <li class=" {% if request.path == tempatmakan_url %} active {% endif %} "><a href="{{tempatmakan_url}}">Rumah Makan</a></li>
+          <li  class=" {% if request.path == kontak_url %} active {% endif %} "><a href="{{kontak_url}}">Hubungi</a></li>
+          <li  class=" {% if request.path == tentang_url %} active {% endif %} "><a href="{{tentang_url}}">Tentang</a></li>
           <li>
             {% if request.user.is_anonymous %}
               <a class="getstarted" href="{% url 'login' %}">Login</a>
@@ -71,7 +86,7 @@
     <div class="container">
       <div class="copyright ">
         Designed by <a href="https://bootstrapmade.com/">Bubu</a>
-      </div>
+      </div>  
     </div>
   </footer><!-- End Footer -->
 

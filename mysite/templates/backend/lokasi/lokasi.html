@@ -20,7 +20,7 @@
                                     <th>Nama</th>
                                     <th>Alamat</th>
                                     <th>Kontak</th>
-                                    <th class="disabled-sorting">Actions</th>
+                                    <th style="weight: 250px;">Actions</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -29,7 +29,7 @@
                                     <th>Nama</th>
                                     <th>Alamat</th>
                                     <th>Kontak</th>
-                                    <th>Actions</th>
+                                    <th style="max-weight: 250px;">Actions</th>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -39,9 +39,8 @@
                                     <td>{{ t.nama }}</td>
                                     <td>{{ t.alamat}}</td>
                                     <td>{{ t.kontak }}</td>
-                                    <td>
+                                    <td  style="max-weight: 250px;">
                                         <a href="{% url 'ubah_lokasi' t.id %}" class="btn btn-success"><i class="fa fa-pencil-square"></i></a>
-                                        <!-- <a href="#" class="btn btn-warning"></a> -->
                                         <a onclick="alert('yakin mau dihapus?')" href="{% url 'hapus_lokasi' t.id %}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                     </td>
                                 </tr>
